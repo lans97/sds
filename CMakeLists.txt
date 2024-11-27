@@ -6,5 +6,5 @@ project(
     LANGUAGES C)
 
 add_library(sds INTERFACE)
-#target_include_directories(sds INTERFACE ./)
+target_include_directories(sds INTERFACE ./)
 
