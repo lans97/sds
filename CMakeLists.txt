@@ -9,7 +9,7 @@ find_package(mimalloc 2.1 REQUIRED)
 
 file(GLOB_RECURSE SDS_SOURCES ./*.c ./*.h)
 
-add_library(sds INTERFACE ${SDS_SOURCES})
+add_library(sds STATIC sds.c)
 target_include_directories(sds INTERFACE ./)
 
 target_link_libraries(sds PUBLIC mimalloc)
