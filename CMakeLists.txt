@@ -5,6 +5,8 @@ project(
     VERSION 2.0.0
     LANGUAGES C)
 
-add_library(sds INTERFACE)
+file(GLOB_RECURSE SDS_SOURCES ./*.c ./*.h)
+
+add_library(sds INTERFACE ${SDS_SOURCES})
 target_include_directories(sds INTERFACE ./)
 
